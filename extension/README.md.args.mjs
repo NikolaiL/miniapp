@@ -21,7 +21,7 @@ ngrok http http://localhost:3000 --url https://yoursubdomian.ngrok.dev
 
 Your miniapp should render as a MiniApp in Farcaster Preview
 
-![MiniApp Preview](https://raw.githubusercontent.com/NikolaiL/miniapp-extension/master/images/MiniAppScreenshot.png)
+![MiniApp Preview](https://raw.githubusercontent.com/NikolaiL/miniapp/master/images/MiniAppScreenshot.png)
 
 For production you will need to generate the manifest accountAssociation values for your production domain and add them to the .env file (\`\`\`FARCASTER_HEADER, FARCASTER_PAYLOAD, FARCASTER_SIGNATURE\`\`\`). You can generate them using [Farcaster Manifest Tools](https://farcaster.xyz/~/developers/mini-apps/manifest).
 

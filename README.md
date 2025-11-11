@@ -16,7 +16,7 @@ Node.js 22.11.0 or higher (LTS version recommended)
 1. Create a new project with MiniApp extension:
 
 ```typescript
-npx create-eth@latest -e NikolaiL/miniapp-extension
+npx create-eth@latest -e NikolaiL/miniapp
 ```
 
 and 
