@@ -29,7 +29,8 @@ NEXT_PUBLIC_APP_SPLASH_IMAGE=\${NEXT_PUBLIC_URL}/favicon.png
 NEXT_PUBLIC_SPLASH_BACKGROUND_COLOR="#212638"
 
 # possible values:
-# developer-tools 
+# One of: games, social, finance, utility, productivity, health-fitness, news-media, 
+# music, shopping, education, developer-tools, entertainment, art-creativity
 NEXT_PUBLIC_APP_PRIMARY_CATEGORY=developer-tools
 
 # hero image for listing in farcaster miniapp page abd base app miniapp directory
