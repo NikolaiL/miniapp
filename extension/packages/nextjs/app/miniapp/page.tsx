@@ -3,7 +3,7 @@
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import { MiniappUserInfo } from "~~/components/MiniappUserInfo";
-import { Address } from "~~/components/scaffold-eth";
+import { Address } from "@scaffold-ui/components";
 
 const MiniappPage: NextPage = () => {
   const { address: connectedAddress } = useAccount();

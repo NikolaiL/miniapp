@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
 import { formatEther } from "viem";
-import { Address } from "~~/components/scaffold-eth";
+import { Address } from "@scaffold-ui/components";
 
 type Greeting = {
   id: string;
