@@ -42,13 +42,13 @@ const Home: NextPage = () => {
         <div className="px-5 w-full sm:w-2xl">
           <div className="w-full flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <h2 className="text-3xl font-bold text-center">New Greeting</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-center">New Greeting</h2>
               <input
                 type="text"
                 value={greeting}
                 onChange={e => setGreeting(e.target.value)}
                 placeholder="Enter greeting..."
-                className="input input-bordered w-full text-4xl px-8 py-8 text-center font-bold"
+                className="input input-bordered w-full text-3xl sm:text-4xl px-8 py-8 text-center font-bold"
                 onKeyDown={e => {
                   if (e.key === "Enter") {
                     handleSetGreeting();
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-4 text-center">Greeting History</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-center">Greeting History</h2>
             <GreetingHistory />
           </div>
         </div>
