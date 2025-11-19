@@ -1,0 +1,10 @@
+--- TEMPLATE FILE
+templates/base/packages/nextjs/types/abitype/abi.d.ts.template.mjs
+
+
+--- ARGS FILES
+(no args files writing to the template)
+
+
+--- RESULTING ARGS
+(no args sent for the template)

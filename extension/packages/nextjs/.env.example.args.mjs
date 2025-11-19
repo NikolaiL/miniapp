@@ -1,7 +1,9 @@
 export const additionalVars = `
 # essential miniapp related variables
 NEXT_PUBLIC_APP_NAME='Scaffold-ETH 2 MiniApp'
+
 NEXT_PUBLIC_URL=https://yourdomain.dev
+NEXT_PUBLIC_PONDER_URL=https://yourponderdomain.dev
 
 # essential miniapp manifest related variables
 # you can get create them at https://farcaster.xyz/~/developers/mini-apps/manifest

@@ -4,13 +4,16 @@
 export const fullContentOverride = `
 "use client";
 
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
+import { EtherInput } from "@scaffold-ui/components";
 import type { NextPage } from "next";
-import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
+import { parseEther } from "viem";
 import { GreetingHistory } from "~~/components/GreetingHistory";
+import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const [greeting, setGreeting] = useState("");
+  const [premiumValue, setPremiumValue] = useState("");
   const { writeContractAsync: writeYourContractAsync, isMining } = useScaffoldWriteContract({
     contractName: "YourContract",
   });
@@ -24,8 +27,10 @@ const Home: NextPage = () => {
       await writeYourContractAsync({
         functionName: "setGreeting",
         args: [greeting],
+        value: premiumValue ? parseEther(premiumValue) : undefined,
       });
       setGreeting("");
+      setPremiumValue("");
     } catch (error) {
       console.error("Error setting greeting:", error);
     }
@@ -41,15 +46,22 @@ const Home: NextPage = () => {
               <input
                 type="text"
                 value={greeting}
-                onChange={(e) => setGreeting(e.target.value)}
-                placeholder="Enter your greeting..."
+                onChange={e => setGreeting(e.target.value)}
+                placeholder="Enter greeting..."
                 className="input input-bordered w-full text-4xl px-8 py-8 text-center font-bold"
-                onKeyDown={(e) => {
+                onKeyDown={e => {
                   if (e.key === "Enter") {
                     handleSetGreeting();
                   }
                 }}
               />
+              <div className="flex flex-col gap-2 items-center">
+                <label className="text-sm font-medium text-center">Premium (Optional)</label>
+                  <EtherInput
+                    defaultValue={premiumValue}
+                    onValueChange={({ valueInEth }) => setPremiumValue(valueInEth)}
+                  />
+              </div>
             </div>
             <button
               className="btn btn-primary mt-2 btn-xl"

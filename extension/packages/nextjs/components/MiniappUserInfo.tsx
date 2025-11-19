@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { sdk } from "@farcaster/miniapp-sdk";
 import { resolveClientFid, useMiniapp } from "~~/components/MiniappProvider";
@@ -85,7 +86,20 @@ export const MiniappUserInfo = () => {
             </tr>
             <tr>
               <td>Profile Image</td>
-              <td>{user?.pfpUrl ? <img src={user.pfpUrl} alt="Profile" className="w-12 h-12 rounded-full" /> : "-"}</td>
+              <td>
+                {user?.pfpUrl ? (
+                  <Image
+                    src={user.pfpUrl}
+                    alt="Profile"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full"
+                    unoptimized
+                  />
+                ) : (
+                  "-"
+                )}
+              </td>
             </tr>
             <tr>
               <td>Location</td>

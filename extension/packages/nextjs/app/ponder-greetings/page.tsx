@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { Address } from "@scaffold-ui/components";
 import { useQuery } from "@tanstack/react-query";
 import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
 import { formatEther } from "viem";
-import { Address } from "@scaffold-ui/components";
 
 type Greeting = {
   id: string;

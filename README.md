@@ -51,10 +51,16 @@ yarn ponder:dev
  - On a fifth terminal, start ngrok (or other) externally available tunnel:
 
 ```typescript
-ngrok http http://localhost:3000 --url https://yoursubdomian.ngrok.dev
+ngrok http http://localhost:3000
 ```
 
-4. Update NEXT_PUBLIC_URL in packages/nextjs/.env for your domain
+ - On a sixth terminal, start ngrok (or other) externally available tunnel for ponder:
+
+```typescript
+ngrok http http://localhost:42069 
+```
+
+4. Update NEXT_PUBLIC_URL and NEXT_PUBLIC_PONDER_URL in packages/nextjs/.env for your domain
 
 5. Go to https://farcaster.xyz/~/developers/mini-apps/preview , enter your app domain and click "Open URL as Mini App"
 
