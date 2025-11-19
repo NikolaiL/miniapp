@@ -67,7 +67,7 @@ ngrok http http://localhost:42069
 
 Your miniapp should load and show your Farcaster Wallet.
 
-![MiniApp Screenshot](images/MiniAppEmbedScreenshot.png)
+![MiniApp Screenshot](images/MiniAppEmbedScreenshot.jpeg)
 
 
 Renders as MiniApp in Farcaster Preview:
