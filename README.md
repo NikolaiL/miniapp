@@ -51,13 +51,13 @@ yarn ponder:dev
  - On a fifth terminal, start ngrok (or other) externally available tunnel:
 
 ```typescript
-ngrok http http://localhost:3000
+ngrok http http://localhost:3000 --url https://yourminiapp.ngrok.dev
 ```
 
  - On a sixth terminal, start ngrok (or other) externally available tunnel for ponder:
 
 ```typescript
-ngrok http http://localhost:42069 
+ngrok http http://localhost:42069 --url https://yourponder.ngrok.dev
 ```
 
 4. Update NEXT_PUBLIC_URL and NEXT_PUBLIC_PONDER_URL in packages/nextjs/.env for your domain
